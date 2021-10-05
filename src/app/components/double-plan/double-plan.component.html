@@ -1,0 +1,46 @@
+<div fxLayoutAlign="center center" fxLayoutGap="16px" fxLayout="column" *ngFor="let day of days">
+  <br>
+  <mat-card [ngStyle.lt-sm]="{width: '100vw'}" fxLayout="column" fxLayoutAlign="center center" style="width: 660px;"
+            fxLayoutGap="16px">
+    <mat-toolbar fxLayoutAlign="center center" color="primary">{{day.name}}</mat-toolbar>
+    <div fxLayout="row" *ngFor="let  subject1 of day.subjects1; let index = index">
+
+      <mat-card fxLayout="column" [ngStyle.lt-sm]="{width: '90px'}" style="width: 100px" fxLayoutAlign="center center">
+        {{subject1.hour}}
+      </mat-card>
+
+      <div fxLayout="column">
+        <mat-card fxFlex="grow" [ngStyle.lt-sm]="{width: '60px'}" style="width: 120px"
+                  fxLayoutAlign="center center">
+          {{subject1.name}}
+        </mat-card>
+        <mat-card fxFlex="grow" [ngStyle.lt-sm]="{width: '60px'}" style="width: 120px"
+                  fxLayoutAlign="center center">
+          {{day.subjects2[index].name}}
+        </mat-card>
+      </div>
+
+      <div fxLayout="column">
+        <mat-card fxFlex="grow" [ngStyle.lt-sm]="{width: '100px'}" style="width: 240px"
+                  fxLayoutAlign="center center">
+          {{subject1.lecturer}}
+        </mat-card>
+        <mat-card fxFlex="grow" [ngStyle.lt-sm]="{width: '100px'}" style="width: 240px"
+                  fxLayoutAlign="center center">
+          {{day.subjects2[index].lecturer}}
+        </mat-card>
+      </div>
+
+      <div fxLayout="column">
+        <mat-card fxFlex="grow" [ngStyle.lt-sm]="{width: '90px'}" style="width: 100px"
+                  fxLayoutAlign="center center">
+          {{subject1.room}}
+        </mat-card>
+        <mat-card fxFlex="grow"  [ngStyle.lt-sm]="{width: '90px'}" style="width: 100px"
+                  fxLayoutAlign="center center">
+          {{day.subjects2[index].room}}
+        </mat-card>
+      </div>
+    </div>
+  </mat-card>
+</div>

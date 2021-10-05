@@ -3,7 +3,7 @@
 @include mat-core();
 
 $plan-angular-primary: mat-palette($mat-indigo);
-$plan-angular-accent: mat-palette($mat-pink, A200, A100, A400);
+$plan-angular-accent: mat-palette($mat-blue);
 $plan-angular-warn: mat-palette($mat-red);
 
 $plan-angular-theme: mat-light-theme((
@@ -18,3 +18,8 @@ $plan-angular-theme: mat-light-theme((
 
 html, body { height: 100vh; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.none{
+  margin: 0;
+  padding: 0;
+}

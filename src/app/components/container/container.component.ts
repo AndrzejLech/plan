@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PlanService} from '../../services/plan.service';
 
 @Component({
@@ -10,12 +10,12 @@ export class ContainerComponent implements OnInit {
 
   constructor(
     private planService: PlanService
-  ) { }
+  ) {
+  }
 
-  planOneOne = this.planService.getInfOneOne()
-  planOneTwo = this.planService.getInfOneTwo()
+  planOneOne = this.planService.getInfOneOne();
+  planOneTwo = this.planService.getInfOneTwo();
 
   ngOnInit(): void {
   }
-
 }

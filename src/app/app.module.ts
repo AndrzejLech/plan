@@ -7,15 +7,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlanComponent } from './components/plan/plan.component';
 import {PlanService} from './services/plan.service';
 import {HttpClientModule} from '@angular/common/http';
-import {FlexModule} from '@angular/flex-layout';
+import {ExtendedModule, FlexModule} from '@angular/flex-layout';
 import {MaterialModule} from './material.module';
 import { ContainerComponent } from './components/container/container.component';
+import { NurComponentComponent } from './components/nur-component/nur-component.component';
+import { InfComponentComponent } from './components/inf-component/inf-component.component';
+import { ToolbarComponentComponent } from './components/toolbar-component/toolbar-component.component';
+import { DoublePlanComponent } from './components/double-plan/double-plan.component';
+import { SzyminComponentComponent } from './components/szymin-component/szymin-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlanComponent,
-    ContainerComponent
+    ContainerComponent,
+    NurComponentComponent,
+    InfComponentComponent,
+    ToolbarComponentComponent,
+    DoublePlanComponent,
+    SzyminComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +33,8 @@ import { ContainerComponent } from './components/container/container.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FlexModule,
-    MaterialModule
+    MaterialModule,
+    ExtendedModule
   ],
   providers: [PlanService],
   bootstrap: [AppComponent]
