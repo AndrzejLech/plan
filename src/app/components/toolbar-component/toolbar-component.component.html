@@ -3,6 +3,13 @@
   <div fxLayoutGap="16px">
     <button mat-raised-button (click)="toInf()">INF</button>
     <button mat-raised-button (click)="toNur()">NUR</button>
-    <button mat-raised-button (click)="toSzymin()">SZYMIN</button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" fxLayout="column">
+      <button mat-menu-item (click)="toSzymin()">SZYMIN</button>
+      <button mat-menu-item (click)="toMamlina()">MAMLINA</button>
+    </mat-menu>
+
   </div>
 </mat-toolbar>

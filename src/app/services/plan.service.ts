@@ -11,7 +11,8 @@ export class PlanService {
   ) {
   }
 
-  baseUrl: string = 'http://127.0.0.1:8080'// 'https://plan-parser.herokuapp.com';
+  baseUrl: string = 'http://127.0.0.1:8080'
+  //baseUrl: string = 'https://plan-parser.herokuapp.com';
 
   getInfOneOne(): Observable<Day[]> {
     return this.http.get(this.baseUrl + '/inf-1-1') as Observable<Day[]>;
@@ -27,5 +28,9 @@ export class PlanService {
 
   getSzymin(): Observable<DoubleDay[]> {
     return this.http.get(this.baseUrl + '/szymin') as Observable<DoubleDay[]>
+  }
+
+  getMamlina(): Observable<DoubleDay[]>{
+    return this.http.get(this.baseUrl + '/mamlina') as Observable<DoubleDay[]>
   }
 }

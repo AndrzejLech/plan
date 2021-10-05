@@ -28,4 +28,8 @@ export class ToolbarComponentComponent implements OnInit {
   toSzymin(): void {
     this.router.navigate([Destinations.SZYMIN]);
   }
+
+  toMamlina() {
+    this.router.navigate([Destinations.MAMLINA])
+  }
 }

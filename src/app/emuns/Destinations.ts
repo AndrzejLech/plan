@@ -1,5 +1,6 @@
 export enum Destinations {
   INF = '',
   NUR = 'nur',
-  SZYMIN = 'szymin'
+  SZYMIN = 'szymin',
+  MAMLINA = 'mamlina'
 }

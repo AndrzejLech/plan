@@ -15,6 +15,7 @@ import { InfComponentComponent } from './components/inf-component/inf-component.
 import { ToolbarComponentComponent } from './components/toolbar-component/toolbar-component.component';
 import { DoublePlanComponent } from './components/double-plan/double-plan.component';
 import { SzyminComponentComponent } from './components/szymin-component/szymin-component.component';
+import { MamlinaContainerComponent } from './components/mamlina-container/mamlina-container.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SzyminComponentComponent } from './components/szymin-component/szymin-c
     InfComponentComponent,
     ToolbarComponentComponent,
     DoublePlanComponent,
-    SzyminComponentComponent
+    SzyminComponentComponent,
+    MamlinaContainerComponent
   ],
   imports: [
     BrowserModule,
