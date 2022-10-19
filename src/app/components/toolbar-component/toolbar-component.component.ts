@@ -21,6 +21,11 @@ export class ToolbarComponentComponent implements OnInit {
     this.router.navigate([Destinations.INF]);
   }
 
+  toMfz(): void {
+    this.router.navigate([Destinations.MFZ]);
+  }
+
+
   toNur(): void {
     this.router.navigate([Destinations.NUR]);
   }

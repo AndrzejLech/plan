@@ -1,0 +1,6 @@
+<div fxLayoutAlign="center center">
+  <button mat-flat-button [disabled]="!weeks![pageIndex-1]" (click)="previousPage()">Poprzedni</button>
+  <button mat-flat-button [disabled]="!weeks![pageIndex+1]" (click)="nextPage()">Następny</button>
+</div>
+<app-plan [days]="weeks![pageIndex].day"></app-plan>
+

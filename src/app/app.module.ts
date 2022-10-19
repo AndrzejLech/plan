@@ -16,17 +16,22 @@ import { ToolbarComponentComponent } from './components/toolbar-component/toolba
 import { DoublePlanComponent } from './components/double-plan/double-plan.component';
 import { SzyminComponentComponent } from './components/szymin-component/szymin-component.component';
 import { MamlinaContainerComponent } from './components/mamlina-container/mamlina-container.component';
+import {MfzContainerComponent} from "./components/mfz-component/mfz-container.component";
+import {PlanWeekComponent} from "./components/plan-week/plan-week.component";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
   declarations: [
     AppComponent,
     PlanComponent,
+    PlanWeekComponent,
     ContainerComponent,
     NurComponentComponent,
     InfComponentComponent,
     ToolbarComponentComponent,
     DoublePlanComponent,
     SzyminComponentComponent,
+    MfzContainerComponent,
     MamlinaContainerComponent
   ],
   imports: [
@@ -36,7 +41,8 @@ import { MamlinaContainerComponent } from './components/mamlina-container/mamlin
     HttpClientModule,
     FlexModule,
     MaterialModule,
-    ExtendedModule
+    ExtendedModule,
+    MatButtonToggleModule
   ],
   providers: [PlanService],
   bootstrap: [AppComponent]
