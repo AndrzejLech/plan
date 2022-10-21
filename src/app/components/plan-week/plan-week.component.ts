@@ -26,14 +26,14 @@ export class PlanWeekComponent implements OnInit {
   nextPage(){
     if(this.weeks![this.pageIndex+1] && this.weeks){
       this.pageIndex++;
-      this.weekEvent.emit(this.weeks[this.pageIndex].day)
+      this.weekEvent.emit(this.weeks[this.pageIndex].days)
     }
   }
 
   previousPage(){
     if(this.weeks![this.pageIndex-1] && this.weeks){
       this.pageIndex--;
-      this.weekEvent.emit(this.weeks[this.pageIndex].day)
+      this.weekEvent.emit(this.weeks[this.pageIndex].days)
     }
   }
 

@@ -1,6 +1,6 @@
-<div fxLayoutAlign="center center">
-  <button mat-flat-button [disabled]="!weeks![pageIndex-1]" (click)="previousPage()">Poprzedni</button>
-  <button mat-flat-button [disabled]="!weeks![pageIndex+1]" (click)="nextPage()">Następny</button>
+<div fxLayoutAlign="center center" fxLayoutGap="10px" style="margin: 10px" >
+  <button mat-flat-button color="primary"  [disabled]="!weeks![pageIndex-1] || !weeks" (click)="previousPage()">Poprzedni</button>
+  <button mat-flat-button color="primary" [disabled]="!weeks![pageIndex+1] || !weeks" (click)="nextPage()">Następny</button>
 </div>
-<app-plan [days]="weeks![pageIndex].day"></app-plan>
+<app-plan [days]="weeks![pageIndex].days"></app-plan>
 
