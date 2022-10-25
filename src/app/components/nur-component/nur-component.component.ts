@@ -13,7 +13,7 @@ export class NurComponentComponent implements OnInit {
   ) {
   }
 
-  planNur = this.planService.getNur();
+  planNur = this.planService.getInfOneOne();
 
   ngOnInit(): void {
   }

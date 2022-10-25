@@ -1,6 +1,8 @@
-<div fxLayoutAlign="center center" fxLayoutGap="10px" style="margin: 10px" >
-  <button mat-flat-button color="primary"  [disabled]="!weeks![pageIndex-1] || !weeks" (click)="previousPage()">Poprzedni</button>
-  <button mat-flat-button color="primary" [disabled]="!weeks![pageIndex+1] || !weeks" (click)="nextPage()">Następny</button>
+<div *ngIf="weekSpan">
+  <div fxLayoutAlign="center center" fxLayoutGap="10px" style="margin: 10px" >
+    <button mat-flat-button color="primary"  [disabled]="!weeks![pageIndex-1] || !weeks" (click)="previousPage()">Poprzedni</button>
+    <p *ngIf="weekSpan">{{weekSpan.toString()}}</p>
+    <button mat-flat-button color="primary" [disabled]="!weeks![pageIndex+1] || !weeks" (click)="nextPage()">Następny</button>
+  </div>
+  <app-plan [days]="weeks![pageIndex].days"></app-plan>
 </div>
-<app-plan [days]="weeks![pageIndex].days"></app-plan>
-

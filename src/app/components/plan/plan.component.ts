@@ -10,8 +10,12 @@ export class PlanComponent implements OnInit {
   @Input()
   days: Day[] | null = []
 
-  constructor() { }
+
+  constructor() {
+  }
+
   ngOnInit(): void {
   }
+
 
 }

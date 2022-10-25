@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PlanService} from "../../services/plan.service";
+import {Week} from "../../models/Week";
 
 @Component({
   selector: 'app-mfz-component',
@@ -11,11 +12,16 @@ export class MfzContainerComponent implements OnInit {
   constructor(
     private planService: PlanService
   ) {
+
   }
 
-  planWeekMfz = this.planService.getWeekInfOneOne();
+  planWeekMfz: Week[] = [];
+
 
   ngOnInit(): void {
+    this.planService.getWeekInfOneOne().subscribe(next => {
+      this.planWeekMfz = next
+    });
   }
 
 }
