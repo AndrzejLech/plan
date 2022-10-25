@@ -1,12 +1,21 @@
-<div fxLayoutAlign="center center" fxLayoutGap="16px" fxLayout="column" *ngFor="let day of days">
-  <br>
-  <mat-card [ngStyle.lt-sm]="{width: '100vw'}" fxLayout="column" fxLayoutAlign="center center" style="width: 660px;" fxLayoutGap="16px">
-    <mat-toolbar fxLayoutAlign="center center" color="primary">{{day.name}}</mat-toolbar>
-    <div fxLayout="row" *ngFor="let subject of day.subjects">
-      <mat-card [ngStyle.lt-sm]="{width: '90px'}" style="width: 100px" fxLayoutAlign="center center">{{subject.hour}}</mat-card>
-      <mat-card [ngStyle.lt-sm]="{width: '60px'}" style="width: 120px" fxLayoutAlign="center center">{{subject.name}}</mat-card>
-      <mat-card [ngStyle.lt-sm]="{width: '100px'}" style="width: 240px" fxLayoutAlign="center center">{{subject.lecturer}}</mat-card>
-      <mat-card [ngStyle.lt-sm]="{width: '90px'}" style="width: 100px" fxLayoutAlign="center center">{{subject.room}}</mat-card>
-    </div>
-  </mat-card>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+
+  <div fxLayoutAlign="center center" fxLayoutGap="16px" fxLayout="column" *ngFor="let day of days">
+    <br>
+    <mat-card [ngStyle.lt-sm]="{width: '100vw'}" fxLayout="column" fxLayoutAlign="center center" style="width: 660px; height: 750px;"
+              fxLayoutGap="16px">
+      <mat-toolbar fxLayoutAlign="center center" color="primary">{{day.name}}</mat-toolbar>
+      <div fxLayout="row" *ngFor="let subject of day.subjects">
+        <mat-card [ngStyle.lt-sm]="{width: '120px'}" style="width: 120px"
+                  fxLayoutAlign="center center">{{subject.hour}}</mat-card>
+        <mat-card [ngStyle.lt-sm]="{width: '60px'}" style="width: 120px"
+                  fxLayoutAlign="center center">{{subject.name}}</mat-card>
+        <mat-card [ngStyle.lt-sm]="{width: '100px'}" style="width: 240px"
+                  fxLayoutAlign="center center">{{subject.lecturer}}</mat-card>
+        <mat-card [ngStyle.lt-sm]="{width: '90px'}" style="width: 100px"
+                  fxLayoutAlign="center center">{{subject.room}}</mat-card>
+      </div>
+    </mat-card>
+  </div>
 </div>

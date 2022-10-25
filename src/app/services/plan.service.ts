@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Day} from '../models/Day';
 import {DoubleDay} from '../models/DoubleDay';
+import {Week} from "../models/Week";
 
 @Injectable({providedIn: 'root'})
 export class PlanService {
@@ -15,15 +16,19 @@ export class PlanService {
   baseUrl: string = 'https://plan-parser.herokuapp.com';
 
   getInfOneOne(): Observable<Day[]> {
-    return this.http.get(this.baseUrl + '/inf-1-1') as Observable<Day[]>;
+    return this.http.get(this.baseUrl + '/mfz') as Observable<Day[]>;
+  }
+
+  getWeekInfOneOne(): Observable<Week[]> {
+    return this.http.get(this.baseUrl + '/mfz-week') as Observable<Week[]>;
   }
 
   getInfOneTwo(): Observable<Day[]> {
-    return this.http.get(this.baseUrl + '/inf-1-2') as Observable<Day[]>;
+    return this.http.get(this.baseUrl + '/mfz') as Observable<Day[]>;
   }
 
   getNur(): Observable<Day[]> {
-    return this.http.get(this.baseUrl + '/nur') as Observable<Day[]>;
+    return this.http.get(this.baseUrl + '/mfz') as Observable<Day[]>;
   }
 
   getSzymin(): Observable<DoubleDay[]> {
