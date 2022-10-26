@@ -1,0 +1,6 @@
+<app-toolbar-component></app-toolbar-component>
+<app-toolbar-timetable-select-component
+  [showNurAllButton]="true"
+  [showNurWeekButton]="true">
+</app-toolbar-timetable-select-component>
+<app-plan [days]="(planNur | async)"></app-plan>

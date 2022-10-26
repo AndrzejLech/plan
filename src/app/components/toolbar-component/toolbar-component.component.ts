@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {Destinations} from '../../emuns/Destinations';
+import {Navigator} from "../../navigation/Navigator";
+
 
 @Component({
   selector: 'app-toolbar-component',
@@ -10,31 +10,12 @@ import {Destinations} from '../../emuns/Destinations';
 export class ToolbarComponentComponent implements OnInit {
 
   constructor(
-    private router: Router
+    public navigator: Navigator
   ) {
   }
 
   ngOnInit(): void {
   }
 
-  toInf(): void {
-    this.router.navigate([Destinations.INF]);
-  }
 
-  toMfz(): void {
-    this.router.navigate([Destinations.MFZ]);
-  }
-
-
-  toNur(): void {
-    this.router.navigate([Destinations.NUR]);
-  }
-
-  toSzymin(): void {
-    this.router.navigate([Destinations.SZYMIN]);
-  }
-
-  toMamlina() {
-    this.router.navigate([Destinations.MAMLINA])
-  }
 }

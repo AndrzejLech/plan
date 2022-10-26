@@ -13,7 +13,7 @@ export class ContainerComponent implements OnInit {
   ) {
   }
 
-  planOneOne = this.planService.getInfOneOne();
+  planOneOne = this.planService.getMfzAll();
   planOneTwo = this.planService.getInfOneTwo();
 
   ngOnInit(): void {

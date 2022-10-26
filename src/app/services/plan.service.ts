@@ -13,15 +13,24 @@ export class PlanService {
   }
 
   //baseUrl: string = 'http://127.0.0.1:8080'
-  baseUrl: string = 'https://plan-parser.herokuapp.com';
+  baseUrl: string = 'https://go-production.up.railway.app';
 
-  getInfOneOne(): Observable<Day[]> {
+  getMfzAll(): Observable<Day[]> {
     return this.http.get(this.baseUrl + '/mfz') as Observable<Day[]>;
   }
 
-  getWeekInfOneOne(): Observable<Week[]> {
+  getMfzWeek(): Observable<Week[]> {
     return this.http.get(this.baseUrl + '/mfz-week') as Observable<Week[]>;
   }
+
+  getNurAll(): Observable<Day[]> {
+    return this.http.get(this.baseUrl + '/nur') as Observable<Day[]>;
+  }
+
+  getNurWeek(): Observable<Week[]> {
+    return this.http.get(this.baseUrl + '/nur-week') as Observable<Week[]>;
+  }
+
 
   getInfOneTwo(): Observable<Day[]> {
     return this.http.get(this.baseUrl + '/mfz') as Observable<Day[]>;

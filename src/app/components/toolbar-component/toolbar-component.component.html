@@ -1,15 +1,15 @@
 <mat-toolbar fxLayoutGap="16px" color="accent" fxLayoutAlign="space-between center">
   <h1>Plan</h1>
   <div fxLayoutGap="16px">
-    <button mat-raised-button (click)="toInf()">INF</button>
-    <button mat-raised-button (click)="toMfz()">MFZ</button>
-    <button mat-raised-button (click)="toNur()">NUR</button>
+    <button mat-raised-button (click)="navigator.toInf()">INF</button>
+    <button mat-raised-button (click)="navigator.toMfzWeek()">MFZ</button>
+    <button mat-raised-button (click)="navigator.toNur()">NUR</button>
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu" fxLayout="column">
-      <button mat-menu-item (click)="toSzymin()">SZYMIN</button>
-      <button mat-menu-item (click)="toMamlina()">MAMLINA</button>
+      <button mat-menu-item (click)="navigator.toSzymin()">SZYMIN</button>
+      <button mat-menu-item (click)="navigator.toMamlina()">MAMLINA</button>
     </mat-menu>
 
   </div>

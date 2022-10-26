@@ -3,5 +3,7 @@ export enum Destinations {
   NUR = 'nur',
   SZYMIN = 'szymin',
   MAMLINA = 'mamlina',
-  MFZ = 'mfz'
+  MFZ_WEEK = 'mfz-week',
+  MFZ_ALL = 'mfz-all'
+
 }
