@@ -10,10 +10,6 @@ export class Navigator {
   ) {
   }
 
-  toInf(): void {
-    this.router.navigate([Destinations.INF]);
-  }
-
   toMfzWeek(): void {
     this.router.navigate([Destinations.MFZ_WEEK]);
   }
@@ -26,12 +22,5 @@ export class Navigator {
     this.router.navigate([Destinations.NUR]);
   }
 
-  toSzymin(): void {
-    this.router.navigate([Destinations.SZYMIN]);
-  }
-
-  toMamlina() {
-    this.router.navigate([Destinations.MAMLINA])
-  }
 
 }
