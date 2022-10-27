@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PlanService} from '../../../services/plan.service';
 
 @Component({
-  selector: 'app-nur-component',
+  selector: 'app-nur-all-component',
   templateUrl: './nur-all-component.component.html',
   styleUrls: ['./nur-all-component.component.scss']
 })

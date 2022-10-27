@@ -18,9 +18,15 @@ export class Navigator {
     this.router.navigate([Destinations.MFZ_ALL]);
   }
 
-  toNur(): void {
-    this.router.navigate([Destinations.NUR]);
+  toNurWeek(): void {
+    this.router.navigate([Destinations.NUR_WEEK]);
   }
+
+  toNurAll(): void {
+    this.router.navigate([Destinations.NUR_ALL]);
+  }
+
+
 
 
 }
