@@ -1,0 +1,18 @@
+
+<mat-toolbar fxLayoutAlign="space-between center" color="primary" >
+  <div fxLayoutGap="16px">
+    <button *ngIf="showMfzAllButton" mat-raised-button (click)="navigator.toMfzAll()">
+      <span fxHide.lt-sm="true">MFZ Plan całkowity</span>
+    </button>
+    <button *ngIf="showMfzWeekButton" mat-raised-button (click)="navigator.toMfzWeek()">
+      <span fxHide.lt-sm="true">MFZ Plan tygodniowy</span>
+    </button>
+    <button *ngIf="showNurAllButton" mat-raised-button (click)="navigator.toNur()">
+      <span fxHide.lt-sm="true">NUR Plan całkowity</span>
+    </button>
+    <button *ngIf="showNurWeekButton" mat-raised-button (click)="navigator.toNur()">
+      <span fxHide.lt-sm="true">NUR Plan tygodniowy</span>
+    </button>
+
+  </div>
+</mat-toolbar>

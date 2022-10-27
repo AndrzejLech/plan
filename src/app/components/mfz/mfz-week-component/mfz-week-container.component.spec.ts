@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MfzContainerComponent } from './mfz-container.component';
+import { MfzWeekContainerComponent } from './mfz-week-container.component';
 
 describe('MfzComponentComponent', () => {
-  let component: MfzContainerComponent;
-  let fixture: ComponentFixture<MfzContainerComponent>;
+  let component: MfzWeekContainerComponent;
+  let fixture: ComponentFixture<MfzWeekContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MfzContainerComponent ]
+      declarations: [ MfzWeekContainerComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MfzContainerComponent);
+    fixture = TestBed.createComponent(MfzWeekContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

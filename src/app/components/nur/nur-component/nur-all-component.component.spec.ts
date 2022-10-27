@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DoublePlanComponent } from './double-plan.component';
+import { NurAllComponentComponent } from './nur-all-component.component';
 
-describe('DoublePlanComponent', () => {
-  let component: DoublePlanComponent;
-  let fixture: ComponentFixture<DoublePlanComponent>;
+describe('NurComponentComponent', () => {
+  let component: NurAllComponentComponent;
+  let fixture: ComponentFixture<NurAllComponentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DoublePlanComponent ]
+      declarations: [ NurAllComponentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DoublePlanComponent);
+    fixture = TestBed.createComponent(NurAllComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

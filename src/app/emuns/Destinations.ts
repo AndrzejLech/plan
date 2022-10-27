@@ -1,7 +1,6 @@
 export enum Destinations {
-  INF = '',
+  BLANK = '',
   NUR = 'nur',
-  SZYMIN = 'szymin',
-  MAMLINA = 'mamlina',
-  MFZ = 'mfz'
+  MFZ_WEEK = 'mfz-week',
+  MFZ_ALL = 'mfz-all'
 }
