@@ -20,6 +20,8 @@ import {ToolbarTimetableSelectComponentComponent} from './components/toolbar-tim
 import {Navigator} from "./navigation/Navigator";
 import {MfzAllContainerComponent} from './components/mfz/mfz-all-container/mfz-all-container.component';
 import { NurWeekComponentComponent } from './components/nur/nur-week-component/nur-week-component.component';
+import { CommonTimetableComponent } from './components/common-timetable/common-timetable/common-timetable.component';
+import { TimetableComponent } from './components/common-timetable/timetable/timetable.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { NurWeekComponentComponent } from './components/nur/nur-week-component/n
     MfzWeekContainerComponent,
     ToolbarTimetableSelectComponentComponent,
     MfzAllContainerComponent,
-    NurWeekComponentComponent
+    NurWeekComponentComponent,
+    CommonTimetableComponent,
+    TimetableComponent
   ],
   imports: [
     BrowserModule,

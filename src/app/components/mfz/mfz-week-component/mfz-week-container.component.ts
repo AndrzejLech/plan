@@ -15,12 +15,12 @@ export class MfzWeekContainerComponent implements OnInit {
 
   }
 
-  planWeekMfz: Week[] = [];
+  planMfzWeek: Week[] = [];
 
 
   ngOnInit(): void {
     this.planService.getMfzWeek().subscribe(next => {
-      this.planWeekMfz = next
+      this.planMfzWeek = next
     });
   }
 

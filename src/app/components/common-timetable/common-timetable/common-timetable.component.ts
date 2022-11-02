@@ -3,11 +3,11 @@ import {PlanService} from "../../../services/plan.service";
 import {Day} from "../../../models/Day";
 
 @Component({
-  selector: 'app-mfz-all-container',
-  templateUrl: './mfz-all-container.component.html',
-  styleUrls: ['./mfz-all-container.component.scss']
+  selector: 'app-common-timetable',
+  templateUrl: './common-timetable.component.html',
+  styleUrls: ['./common-timetable.component.scss']
 })
-export class MfzAllContainerComponent implements OnInit {
+export class CommonTimetableComponent implements OnInit {
 
   constructor(
     private planService: PlanService
@@ -16,11 +16,17 @@ export class MfzAllContainerComponent implements OnInit {
   }
 
   planMfzAll: Day[] = [];
+  planNurAll: Day[] = [];
 
 
   ngOnInit(): void {
     this.planService.getMfzAll().subscribe(next => {
       this.planMfzAll = next
     });
+    this.planService.getMfzAll().subscribe(next => {
+      this.planNurAll = next
+    });
   }
+
+
 }
