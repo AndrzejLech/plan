@@ -1,23 +1,4 @@
-<!--<div>-->
-<!--  <p *ngFor="let month of months">-->
-<!--    {{month}}-->
-<!--  </p>-->
 
-<!--</div>-->
-
-
-<!--<div fxLayout="row wrap" fxLayoutAlign="center center">-->
-
-<!--  <div fxLayoutAlign="center center" fxLayoutGap="16px" fxLayout="column" *ngFor="let month of months">-->
-<!--    <mat-card [ngStyle.lt-sm]="{width: '100vw'}" fxLayout="row wrap" style="width: 660px; min-height: 750px">-->
-<!--      <mat-toolbar color="primary" fxLayoutAlign="center center">{{monthsName[month-1]}}</mat-toolbar>-->
-
-<!--      <div fxLayout="row" *ngFor="let item of [].constructor(getDaysFromMonths(2022,month)); let i = index">-->
-<!--        <mat-card [ngStyle.lt-sm]="{width: '55px',height: '55px'}" > style="width: 55px; height: 55px">{{i+1}}</mat-card>-->
-<!--      </div>-->
-<!--    </mat-card>-->
-<!--  </div>-->
-<!--</div>-->
 <div *ngIf="mfzWeeks.length > 1">
   <div *ngFor="let item of getAllSemesterMonths(); let i = index" fxLayoutAlign="center center"
        fxLayoutGap="40px" fxLayout="column">

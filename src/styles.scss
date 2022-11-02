@@ -1,9 +1,9 @@
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 
 @include mat-core();
 
-$plan-angular-primary: mat-palette($mat-indigo);
-$plan-angular-accent: mat-palette($mat-blue);
+$plan-angular-primary: mat-palette($mat-gray);
+$plan-angular-accent: mat-palette($mat-lime);
 $plan-angular-warn: mat-palette($mat-red);
 
 $plan-angular-theme: mat-light-theme((
