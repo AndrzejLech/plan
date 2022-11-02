@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Week} from "../../../models/Week";
+import {TrimDayName} from "../../../utils/TrimDayName";
 import {Day} from "../../../models/Day";
 
 @Component({
@@ -8,12 +10,12 @@ import {Day} from "../../../models/Day";
 })
 export class TimetableComponent implements OnInit {
   @Input()
-  mfzDays: Day[] | null = []
+  mfzWeeks: Week[] | [] = []
 
   @Input()
-  nurDays: Day[] | null = []
+  nurWeeks: Week[] | [] = []
 
-  months = [
+  monthsName = [
     'Styczeń',
     'Luty',
     'Marzec',
@@ -28,12 +30,17 @@ export class TimetableComponent implements OnInit {
     'Grudzień'
   ];
 
+  daysName = ['pon', 'wto', 'śro', 'czw', 'pią', 'sob', 'nie']
 
-  constructor() {
+  startingCurrentMonth: number = new Date().getMonth() ;
+  currentMonth = this.startingCurrentMonth
+
+  constructor(
+    private trimDay: TrimDayName
+  ) {
   }
 
   ngOnInit(): void {
-
 
   }
 
@@ -41,4 +48,69 @@ export class TimetableComponent implements OnInit {
     return new Date(year, month, 0).getDate();
   }
 
+  isCurrentMonth(dayName: string, monthIndex:number) {
+    let dayMonthIndex = this.trimDay.trimToMonth(dayName)-1
+    return (dayMonthIndex === monthIndex)
+  }
+
+  incrementMonth() {
+    this.currentMonth++;
+  }
+
+  getDayNumber(dayName: string) {
+    return this.trimDay.trimToDay(dayName)
+  }
+
+  getCurrentMonthWeeks(mfzWeeks: Week[], monthIndex: number) {
+    let currentMonthWeeks: Week[] = []
+    for (let week of mfzWeeks) {
+      for (let day of week.days) {
+        if (this.trimDay.trimToMonth(day.name)-1 === monthIndex) {
+          currentMonthWeeks.push(week)
+          break;
+        }
+      }
+    }
+    return currentMonthWeeks;
+  }
+
+  getAllSemesterMonths() {
+    let months = []
+    if (this.mfzWeeks) {
+      let lastWeek = this.mfzWeeks[this.mfzWeeks.length - 1].days
+      let lastMonth = this.trimDay.trimToMonth(lastWeek[lastWeek.length - 1].name)
+
+      if (this.startingCurrentMonth > lastMonth) {
+        let monthDifference = (12 - this.startingCurrentMonth) + lastMonth
+        for (let i = this.startingCurrentMonth; i < this.startingCurrentMonth + monthDifference; i++) {
+          if (i > 11) {
+            months.push(i - 12)
+          } else months.push(i)
+        }
+      } else {
+        let monthDifference = lastMonth - this.startingCurrentMonth
+        for (let i = this.startingCurrentMonth; i < monthDifference; i++) {
+          months.push(i)
+        }
+      }
+    }
+    return months
+  }
+
+  isBothBusy(mfzDay: Day) {
+    let mfzDayName = mfzDay.name
+    let mfzDayBusyStatus = mfzDay.isBusy;
+    for(let week of this.nurWeeks){
+      for(let day of week.days){
+        if(day.name === mfzDayName){
+          let nurDayBusyStatus = day.isBusy
+          if(nurDayBusyStatus === mfzDayBusyStatus){
+            return true
+          }
+        }
+      }
+    }
+    return false
+
+  }
 }

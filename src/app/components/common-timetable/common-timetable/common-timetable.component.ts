@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PlanService} from "../../../services/plan.service";
-import {Day} from "../../../models/Day";
+import {Week} from "../../../models/Week";
 
 @Component({
   selector: 'app-common-timetable',
@@ -15,16 +15,16 @@ export class CommonTimetableComponent implements OnInit {
 
   }
 
-  planMfzAll: Day[] = [];
-  planNurAll: Day[] = [];
+  planMfzWeek: Week[] = [];
+  planNurWeek: Week[] = [];
 
 
   ngOnInit(): void {
-    this.planService.getMfzAll().subscribe(next => {
-      this.planMfzAll = next
+    this.planService.getMfzWeek().subscribe(next => {
+      this.planMfzWeek = next
     });
-    this.planService.getMfzAll().subscribe(next => {
-      this.planNurAll = next
+    this.planService.getNurWeek().subscribe(next => {
+      this.planNurWeek = next
     });
   }
 
