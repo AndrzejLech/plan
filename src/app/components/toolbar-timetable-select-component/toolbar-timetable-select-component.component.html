@@ -1,18 +1,21 @@
 
-<mat-toolbar fxLayoutAlign="space-between center" color="primary" >
+<mat-toolbar *ngIf="showMfzAllButton || showMfzWeekButton || showNurAllButton || showNurWeekButton" fxLayoutAlign="space-between center" fxLayoutAlign.lt-sm="space-around center" color="primary" >
   <div fxLayoutGap="16px">
     <button *ngIf="showMfzAllButton" mat-raised-button (click)="navigator.toMfzAll()">
-      <span fxHide.lt-sm="true">MFZ Plan całkowity</span>
+      <span fxShow.gt-lg="true" fxHide.lt-sm="true">MFZ Plan całkowity</span>
+      <span fxHide.gt-lg="true" fxShow.lt-sm="true">MFZ Cały</span>
     </button>
     <button *ngIf="showMfzWeekButton" mat-raised-button (click)="navigator.toMfzWeek()">
-      <span fxHide.lt-sm="true">MFZ Plan tygodniowy</span>
+      <span fxShow.gt-lg="true" fxHide.lt-sm="true">MFZ Plan tygodniowy</span>
+      <span fxHide.gt-lg="true" fxShow.lt-sm="true">MFZ tyg.</span>
     </button>
     <button *ngIf="showNurAllButton" mat-raised-button (click)="navigator.toNurAll()">
-      <span fxHide.lt-sm="true">NUR Plan całkowity</span>
+      <span fxShow.gt-lg="true" fxHide.lt-sm="true">NUR Plan całkowity</span>
+      <span fxHide.gt-lg="true" fxShow.lt-sm="true">NUR Cały</span>
     </button>
     <button *ngIf="showNurWeekButton" mat-raised-button (click)="navigator.toNurWeek()">
-      <span fxHide.lt-sm="true">NUR Plan tygodniowy</span>
+      <span fxShow.gt-lg="true" fxHide.lt-sm="true">NUR Plan tygodniowy</span>
+      <span fxHide.gt-lg="true" fxShow.lt-sm="true">NUR tyg.</span>
     </button>
-
   </div>
 </mat-toolbar>

@@ -1,29 +1,21 @@
-
 <div *ngIf="mfzWeeks.length > 1">
-  <div *ngFor="let item of getAllSemesterMonths(); let i = index" fxLayoutAlign="center center"
-       fxLayoutGap="40px" fxLayout="column">
-
-    <table style=" background-color:white ">
-
-        <tr>
-          <td colspan="7">
+  <div *ngFor="let item of getAllSemesterMonths(); let i = index" fxLayoutAlign="center center" fxLayoutGap="40px" fxLayout="column">
+    <table style=" background-color:white">
+      <tr>
+        <td colspan="7">
           <mat-toolbar fxLayoutAlign="center center" color="primary">{{months[item]}}</mat-toolbar>
-          </td>
-        </tr>
-
-
+        </td>
+      </tr>
       <td *ngFor="let dayName of daysName"><p fxLayoutAlign="center center">{{dayName}}</p>
       </td>
-
       <tr *ngFor="let week of getCurrentMonthWeeks(mfzWeeks, item )">
         <td *ngFor="let day of week.days " style="height: 60px;width: 60px"
-            [ngStyle]="{'color':isCurrentMonth(day.name, item)?'black': 'grey','background-color':isBothBusy(day)?'white': '#8BC34A'}">
+            [ngStyle]="{'color':isCurrentMonth(day.name, item)?'black': 'grey','background-color': !isBothBusy(day)? '#8BC34A':'white'}">
           <p fxLayoutAlign="center center">{{getDayNumber(day.name)}}</p>
         </td>
       </tr>
-
-
     </table>
+    <br>
   </div>
 </div>
 

@@ -1,12 +1,11 @@
-@import '@angular/material/theming';
+@use '@angular/material' as mat;
+@include mat.core();
 
-@include mat-core();
+$plan-angular-primary:  mat.define-palette(mat.$gray-palette, 200);
+$plan-angular-accent: mat.define-palette(mat.$light-green-palette, 500);
+$plan-angular-warn: mat.define-palette(mat.$red-palette);
 
-$plan-angular-primary: mat-palette($mat-gray);
-$plan-angular-accent: mat-palette($mat-lime);
-$plan-angular-warn: mat-palette($mat-red);
-
-$plan-angular-theme: mat-light-theme((
+$plan-angular-theme: mat.define-light-theme((
   color: (
     primary: $plan-angular-primary,
     accent: $plan-angular-accent,
@@ -14,7 +13,7 @@ $plan-angular-theme: mat-light-theme((
   )
 ));
 
-@include angular-material-theme($plan-angular-theme);
+@include mat.all-component-themes($plan-angular-theme);
 
 html, body { height: 100vh; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
