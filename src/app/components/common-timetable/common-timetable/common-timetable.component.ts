@@ -3,11 +3,11 @@ import {PlanService} from "../../../services/plan.service";
 import {Week} from "../../../models/Week";
 
 @Component({
-  selector: 'app-mfz-week-component',
-  templateUrl: './mfz-week-container.component.html',
-  styleUrls: ['./mfz-week-container.component.scss']
+  selector: 'app-common-timetable',
+  templateUrl: './common-timetable.component.html',
+  styleUrls: ['./common-timetable.component.scss']
 })
-export class MfzWeekContainerComponent implements OnInit {
+export class CommonTimetableComponent implements OnInit {
 
   constructor(
     private planService: PlanService
@@ -16,12 +16,17 @@ export class MfzWeekContainerComponent implements OnInit {
   }
 
   planMfzWeek: Week[] = [];
+  planNurWeek: Week[] = [];
 
 
   ngOnInit(): void {
     this.planService.getMfzWeek().subscribe(next => {
       this.planMfzWeek = next
     });
+    this.planService.getNurWeek().subscribe(next => {
+      this.planNurWeek = next
+    });
   }
+
 
 }

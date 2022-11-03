@@ -15,12 +15,12 @@ export class MfzAllContainerComponent implements OnInit {
 
   }
 
-  planAllMfz: Day[] = [];
+  planMfzAll: Day[] = [];
 
 
   ngOnInit(): void {
     this.planService.getMfzAll().subscribe(next => {
-      this.planAllMfz = next
+      this.planMfzAll = next
     });
   }
 }

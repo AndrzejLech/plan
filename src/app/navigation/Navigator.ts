@@ -26,6 +26,11 @@ export class Navigator {
     this.router.navigate([Destinations.NUR_ALL]);
   }
 
+  toMfzNurCommon(): void {
+    this.router.navigate([Destinations.MFZ_NUR_COMMON]);
+  }
+
+
 
 
 
