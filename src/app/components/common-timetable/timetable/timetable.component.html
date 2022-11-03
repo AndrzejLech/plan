@@ -10,7 +10,10 @@
       </td>
       <tr *ngFor="let week of getCurrentMonthWeeks(mfzWeeks, item )">
         <td *ngFor="let day of week.days " style="height: 60px;width: 60px"
-            [ngStyle]="{'color':isCurrentMonth(day.name, item)?'black': 'grey','background-color': !isBothBusy(day)? '#8BC34A':'white'}">
+            [ngStyle]="{
+            'color': isCurrentMonth(day.name, item)?'black':'grey',
+            'background-color' : !isBothBusy(day)?'#8BC34A':'white'
+            }">
           <p fxLayoutAlign="center center">{{getDayNumber(day.name)}}</p>
         </td>
       </tr>
