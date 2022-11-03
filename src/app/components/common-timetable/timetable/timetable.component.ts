@@ -88,17 +88,16 @@ export class TimetableComponent implements OnInit {
   }
 
   isBothBusy(mfzDay: Day): boolean {
-    let mfzDayName = mfzDay.name
-    let mfzDayBusyStatus = mfzDay.isBusy;
     for (let week of this.nurWeeks) {
-      for (let day of week.days) {
-        if (day.name === mfzDayName) {
-          let nurDayBusyStatus = day.isBusy
-          return nurDayBusyStatus === mfzDayBusyStatus
+      for (let nurDay of week.days) {
+        if (nurDay.name === mfzDay.name) {
+          console.log(nurDay.name, nurDay.isBusy, mfzDay.isBusy)
+          if (nurDay.isBusy || mfzDay.isBusy) {
+            return true
+          }
         }
       }
     }
     return false
-
   }
 }
