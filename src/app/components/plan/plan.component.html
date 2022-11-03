@@ -1,10 +1,7 @@
 
-<div fxLayout="row wrap" fxLayoutAlign="center center">
-
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
   <div fxLayoutAlign="center center" fxLayoutGap="16px" fxLayout="column" *ngFor="let day of days">
-    <br>
-    <mat-card [ngStyle.lt-sm]="{width: '100vw'}" fxLayout="column" fxLayoutAlign="center center" style="width: 660px; height: 750px; min-height: 750px"
-              fxLayoutGap="16px">
+    <mat-card [ngStyle.lt-sm]="{width: '100vw'}" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="8px">
       <mat-toolbar fxLayoutAlign="center center" color="primary">{{day.name}}</mat-toolbar>
       <div fxLayout="row" *ngFor="let subject of day.subjects">
         <mat-card [ngStyle.lt-sm]="{width: '120px'}" style="width: 120px"
