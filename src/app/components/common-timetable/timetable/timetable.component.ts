@@ -91,7 +91,6 @@ export class TimetableComponent implements OnInit {
     for (let week of this.nurWeeks) {
       for (let nurDay of week.days) {
         if (nurDay.name === mfzDay.name) {
-          console.log(nurDay.name, nurDay.isBusy, mfzDay.isBusy)
           if (nurDay.isBusy || mfzDay.isBusy) {
             return true
           }
